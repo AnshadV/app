@@ -1,0 +1,37 @@
+		.menu{
+			float:right;
+		}
+		ul {
+			list-style-type: none;
+			margin-top: 20px;
+			margin-right: 5px;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		li {
+			width: 100px;
+			height: 70px;
+			float: left;
+		}
+
+		li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 25px 16px;
+			text-decoration: none;
+		}
+
+		li a:hover {
+			background-color: #111;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+		.active{
+			height:100%;
+		}
+		

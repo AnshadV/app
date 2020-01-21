@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" src="min.css">
+	<style>
+		.preimg img{
+			width: 150px;
+			height: 50px;
+			padding-bottom: 2px;
+			padding-right: 3px;
+
+		}
+		.preimg {
+			align-items: left;
+			margin-right: 70%;
+
+		}
+		.dropbtn {
+			background-color: #333;
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		}
+		.dlang{
+			float: right;
+		}
+
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+
+		.dropdown-content a:hover {background-color: #111}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		.dropdown:hover .dropbtn {
+			background-color: #3e8e41;
+		}
+		.menu{
+			float:right;
+		}
+		ul {
+			list-style-type: none;
+			margin-top: 20px;
+			margin-right: 5px;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		li {
+			width: 165px;
+			height: 70px;
+			float: left;
+		}
+
+		li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 25px 16px;
+			text-decoration: none;
+		}
+
+		li a:hover {
+			background-color: #111;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+		.active{
+			height:100%;
+		}
+		/*jssor slider loading skin spin css*/
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /*jssor slider bullet skin 053 css*/
+        .jssorb053 .i {position:absolute;cursor:pointer;}
+        .jssorb053 .i .b {fill:#fff;fill-opacity:0.5;}
+        .jssorb053 .i:hover .b {fill-opacity:.7;}
+        .jssorb053 .iav .b {fill-opacity: 1;}
+        .jssorb053 .i.idn {opacity:.3;}
+
+        /*jssor slider arrow skin 093 css*/
+        .jssora093 {display:block;position:absolute;cursor:pointer;}
+        .jssora093 .c {fill:none;stroke:#fff;stroke-width:400;stroke-miterlimit:10;}
+        .jssora093 .a {fill:none;stroke:#fff;stroke-width:400;stroke-miterlimit:10;}
+        .jssora093:hover {opacity:.8;}
+        .jssora093.jssora093dn {opacity:.6;}
+        .jssora093.jssora093ds {opacity:.3;pointer-events:none;}
+
+        .searchForm {
+    position: relative;
+}
+.customSelect {
+    width: 100%;
+    max-width: 370px;
+}
+.searchForm.type2 input[type="search"] {
+    background: #fff;
+    border: 2px solid #959595;
+}
+
+.searchForm input[type="search"] {
+    display: inline-block;
+    width: 100%;
+    max-width: 505px;
+    height: 52px;
+    padding: 11px 0 11px 20px;
+    font-size: 17px;
+    line-height: 19px;
+    color: #222;
+    font-style: normal;
+    background-color: #f1f1f1;
+    background-image: none;
+    border: 1px solid #8196a1;
+    border-radius: 0;
+    -webkit-transition: none;
+    transition: none;
+}
+.searchForm input[type="submit"] {
+    background: transparent url(https://www.solodev.com/assets/news-events-tabs/search-ico.png) no-repeat center center;
+    font-size: 0;
+    color: transparent;
+    border: 0;
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.dropdownCategories {
+    display: inline-block;
+    width:100%;
+    max-width: 505px;
+    height: 52px;
+    padding: 15px 0 11px;
+    font-size: 17px;
+    line-height: 19px;
+    color: #222;
+    font-style: normal;
+    background: #fff;
+    border: 2px solid #959595;
+    background-image: none;
+    border-radius: 0;
+    -webkit-transition: none;
+    transition: none;
+}
+.dropdownCategories select {
+  width: 100%;
+  padding: 0 20px;
+  border: 0px;
+  outline: none;
+}
+
+.nav-pills > li > a {
+    border-radius: 0;
+    font-size: 18px;
+    padding: 6px 18px;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: #fff;
+    background-color: #662d91;
+}
+
+.tab-content {
+    margin: 50px 0 20px 0;
+}
+.media > .pull-left {
+    margin-right: 29px;
+}
+.media .dateEl {
+    display: inline-block;
+    text-align: center;
+    background: #f9f9f9;
+    padding: 18px 0 25px 0;
+    color: #173d51;
+    font-size: 16px;
+    font-weight: 700;
+    width: 113px;
+    text-transform: uppercase;
+}
+.media .dateEl em {
+    display: block;
+    color: #662d91;
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 5px;
+    font-style: normal;
+}
+.media .media-heading a {
+    color: #022235;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+.media .meta-data {
+    margin: 0 0 7px 0;
+}
+.media .longDate, .media .timeEl {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 700;
+    color: #636465;
+    text-transform: uppercase;
+    min-height: 16px;
+}
+.media .longDate {
+    background: transparent url(../images/ico-calendar.png) no-repeat left top;
+    padding: 0 10px 0 24px;
+    border-right: 1px solid #eb5b4c;
+    margin-right: 3px;
+}
+#tab1.tab-pane .media .longDate {
+    border-right: none;
+}
+.blogPost--small {
+    color: #7c7b7b;
+    margin: 20px 30px 40px 0;
+}
+.blogPost--small .media > .pull-left {
+    margin-right: 25px;
+}
+.blogPost--small a {
+    color: #662d91;
+}
+.blogPost--small .date, .blogPost--small .dateEl2 {
+    display: block;
+    text-align: center;
+    padding: 18px 0 25px 0;
+    color: #fff;
+    background: #662d91;
+    width: 113px;
+}
+.blogPost--small .date span, .blogPost--small .dateEl2 span {
+    display: inline-block;
+    font-size: 42px;
+    line-height: 1;
+    letter-spacing: 0em;
+    text-indent: -0.1em;
+    color: #fff;
+    font-weight: bold;
+}
+.blogPost--small .date small, .blogPost--small .dateEl2 small {
+    display: block;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.blogPost--small h4 {
+    margin: 0 0 12px 0;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+
+
+.btn-default {
+    color: #fff;
+    font-size: 14px;
+    background-color: #662d91;
+    border-radius : 0px;
+}
+.foodsug{
+	float:right;
+}
+
+
+
+.events{
+	float:left;
+}
+.bmrcalc td{
+	padding:15px;
+}
+.doseinfo td{
+	padding:15px;
+}
+.cont{
+	width:100%;
+}
+.doseinfo{
+	border-width:1px;
+
+}
+	</style>
+	<title></title>
+</head>
+<body>
+	<div class="prehead">
+		<div class="dlang">
+			<button class="dropbtn"><a href="worker.html">Worker</a></button>
+			<button class="dropbtn">Select your Language</button>
+			<div class="dropdown-content">
+				<a href="#">English</a>
+				<a href="#">Hindi</a>
+				<a href="#">Kannada</a>
+			</div>
+		</div>
+		<div class="preimg">
+			<img src="poshan.png">
+			<img src="MWCD.png">
+		</div>
+		<hr>
+	</div>
+
+	<div class="head">
+		<img src="MWCD.png" height="100px" width="250px">
+		<div class="menu">
+			<ul>
+				<li><a class="active" href="#home">Home</a></li>
+				<li><a href="#news">Events</a></li>
+				<li><a href="#contact">Analytics</a></li>
+				<li><a href="#contact">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li><a href="#contact">Details</a></li>
+			</ul>
+		</div>
+
+		<script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
+
+<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
+            <div>
+                <img data-u="image" src="banner04_0.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="banner06_1.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="banner04_0.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="banner06_1.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="banner04_0.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="banner.jpg" />
+            </div>
+
+        </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">responsive slider</a>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb053" style="position:absolute;bottom:16px;right:16px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:14px;height:14px;">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <path class="b" d="M11400,13800H4600c-1320,0-2400-1080-2400-2400V4600c0-1320,1080-2400,2400-2400h6800 c1320,0,2400,1080,2400,2400v6800C13800,12720,12720,13800,11400,13800z"></path>
+                </svg>
+            </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora093" style="width:50px;height:50px;top:0px;left:30px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <circle class="c" cx="8000" cy="8000" r="5920"></circle>
+                <polyline class="a" points="7777.8,6080 5857.8,8000 7777.8,9920 "></polyline>
+                <line class="a" x1="10142.2" y1="8000" x2="5857.8" y2="8000"></line>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora093" style="width:50px;height:50px;top:0px;right:30px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <circle class="c" cx="8000" cy="8000" r="5920"></circle>
+                <polyline class="a" points="8222.2,6080 10142.2,8000 8222.2,9920 "></polyline>
+                <line class="a" x1="5857.8" y1="8000" x2="10142.2" y2="8000"></line>
+            </svg>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:500,$Delay:12,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:2049,$Easing:$Jease$.$OutQuad},
+              {$Duration:500,$Delay:40,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$SlideOut:true,$Easing:$Jease$.$OutQuad},
+              {$Duration:1000,x:-0.2,$Delay:20,$Cols:16,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Assembly:260,$Easing:{$Left:$Jease$.$InOutExpo,$Opacity:$Jease$.$InOutQuad},$Opacity:2,$Outside:true,$Round:{$Top:0.5}},
+              {$Duration:1600,y:-1,$Delay:40,$Cols:24,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:$Jease$.$OutJump,$Round:{$Top:1.5}},
+              {$Duration:1200,x:0.2,y:-0.1,$Delay:16,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InWave,$Top:$Jease$.$InWave,$Clip:$Jease$.$OutQuad},$Round:{$Left:1.3,$Top:2.5}},
+              {$Duration:1500,x:0.3,y:-0.3,$Delay:20,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.2,0.8],$Top:[0.2,0.8]},$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InJump,$Top:$Jease$.$InJump,$Clip:$Jease$.$OutQuad},$Round:{$Left:0.8,$Top:2.5}},
+              {$Duration:1500,x:0.3,y:-0.3,$Delay:20,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.1,0.9],$Top:[0.1,0.9]},$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InJump,$Top:$Jease$.$InJump,$Clip:$Jease$.$OutQuad},$Round:{$Left:0.8,$Top:2.5}}
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$,
+                $SpacingX: 16,
+                $SpacingY: 16
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+     <script type="text/javascript">jssor_1_slider_init();
+    </script>
+
+
+
+
+
+
+
+
+		<div class="bmrcalc">
+			<table width=40%>
+				<tr>
+					<td><p class="formt">Female</p></td>
+					<td><input id="female" type="radio" onchange="calsPerDay()"><br></td>
+				</tr>
+				<tr>
+					<td><p class="formt">Male</p></td>
+					<td><input id="male" type="radio" onchange="calsPerDay()"><br></td>
+				</tr>
+				<tr>
+					<td><p class="formt">Age</p></td>
+					<td><input id="age" type="number" oninput="calsPerDay()" value="50"></td>
+				</tr>
+				<tr>
+					<td><p class="formt">Height</p></td>
+					<td><input id="height" type="number" oninput="calsPerDay()" value="70"></td>
+				</tr>
+				<tr>
+					<td><p class="formt">Weight</p></td>
+					<td><input id="weight" type="number" oninput="calsPerDay()" value="50"></td>
+				</tr>
+				<tr>
+					<td><p><center>Base metabolic rate: <span id="totalCals"></span> kcal per day</center></p></td>
+				</tr>
+			</table>
+
+		</div><br><br>
+<div class="cont">
+
+		<div class="nutcalc">
+			<table width="40%">
+				<tr>
+			<td><label>breakfast:</label></td>
+<td><select id="Breakfast">
+			<option value="0" selected>Nothing</option>
+			<option value="40">rice</option>
+			<option value="60" >chapati</option>
+			<option value="70">Daal</option>
+		</select></td>
+	</tr>
+		<tr>
+		<br><br>
+		<td><label>lunch:</label></td>
+	<td><select id="Lunch" >
+			<option value="0" selected>Nothing</option>
+			<option value="10">tea</option>
+			<option value="20" >coffee</option>
+			<option value="30">Dosa</option>
+		</select></td>
+	</tr>
+		<br><br>
+		<tr>
+			<td><label>dinner:</label></td>
+			<td><select id="Dinner">
+			<option value="0" selected>Nothing</option>
+			<option value="43">rice</option>
+			<option value="65" >noodles</option>
+			<option value="78">Biryani</option>
+		</select></td>
+	</tr>
+		
+		<br><br>
+		<tr>
+			<td><label>fruits:</label></td>
+		<td><select id="Fruits">
+			<option value="0" selected>Nothing</option>
+			<option value="54">apple</option>
+			<option value="62" >papaya</option>
+			<option value="71">banana</option>
+		</select></td>
+	</tr>
+	<tr>
+		<td>
+	<br/>
+		<br/>
+		<button type="button" onclick="GetSelectedValue()">Confirm</button>
+		<p>Calories you have :</p>
+		<p id="result">0</p>
+	</td>
+</tr>
+</table>
+	</div>
+</div>
+		<script>
+
+			function GetSelectedValue(){
+				var e = document.getElementById("Lunch");
+				var e1 = e.options[e.selectedIndex].value;
+				var f = document.getElementById("Breakfast");
+				var f1 = f.options[f.selectedIndex].value;
+				
+				var g = document.getElementById("Dinner");
+				var g1 = g.options[g.selectedIndex].value;
+				var h = document.getElementById("Fruits");
+				var h1 = h.options[h.selectedIndex].value;
+				var result= parseInt(e1)+parseInt(f1)+parseInt(g1)+parseInt(h1);
+			
+				
+				document.getElementById("result").innerHTML = result;
+			}
+
+			
+			
+		</script>
+
+	<div class="foodsug">
+		<table><tr>
+		<td colspan="3"><h3>Food Suggestion</h3></td></tr>
+		<tr><td colspan="3"><p>Food Suggestion is based on your Regional and Seasonal availability</p></td></tr>
+		
+			<tr>
+				<td><b>Item</b></td>
+				<td><b>Potion</b></td>
+				<td><b>Calories</b></td>
+			</tr>
+			<tr>
+				<td>Item1</td>
+				<td>1 nos</td>
+				<td>120</td>
+			</tr>
+			<tr>
+				<td>Item2</td>
+				<td>1 plate</td>
+				<td>120</td>
+			</tr>
+			<tr>
+				<td>Item3</td>
+				<td>1 glass</td>
+				<td>200</td>
+			</tr>
+		</table>
+
+	</div>
+
+	
+		<script>
+function calsPerDay() {
+  function find(id) { return document.getElementById(id) }
+
+  var age = find("age").value
+  var height = find("height").value 
+  var weight = find("weight").value
+  var result = 0
+  if (find("male").checked) 
+    result = 66.47 + (13.75 * weight) + (5.0 * height - (6.75 * age))
+  else if (find("female").checked)
+    result = 665.09 + (9.56 * weight) + (1.84 * height - (4.67 * age))
+  find("totalCals").innerHTML = Math.round( result )
+}
+calsPerDay()
+</script>
+
+
+
+<div class="doseinfo">
+	<h3>Your Upcoming Checkups</h3>
+	<table>
+		<tr>
+			<td><b>Date</b</td>
+			<td><b>Med Name</b></td>
+			<td><b>Venue<b></td>
+		</tr>
+		<tr>
+			<td>25/01/2020</td>
+			<td>TT-1</td>
+			<td>Primary Health Center K Narayanpura</td>
+		</tr>
+		<tr>	
+			<td>10/03/2020</td>
+			<td>TT-2</td>
+			<td>Primary Health Center K Narayanpura</td>
+		</tr>
+	</table>
+</div>
+<div class="events">
+<div class="container">  
+
+  <h3>EVENTS & NEWS</h3>
+  <hr>
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="tab1">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="media">
+            <a class="pull-left" href="#"><span class="dateEl"><em>30</em>Nov</span></a>
+            <div class="media-body">
+              <h4 class="media-heading">
+                <a href="#">Event 1</a>
+              </h4>
+              <div class="meta-data">
+                <span class="longDate">Nov 30, 2016</span> <span class="timeEl">12:00pm - 02:00pm</span>
+              </div>
+              <p>
+               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              </p>
+            </div><!-- / media-body -->
+          </div><!-- / media -->
+          <div class="media">
+            <a class="pull-left" href="#"><span class="dateEl"><em>11</em>Dec</span></a>
+            <div class="media-body">
+              <h4 class="media-heading">
+                <a href="#">Event 2</a>
+              </h4>
+              <div class="meta-data">
+                <span class="longDate">Dec 11, 2016</span> <span class="timeEl">06:00pm - 07:30pm</span>
+              </div>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              </p>
+            </div><!-- / media-body -->
+          </div><!-- / media -->
+          <div class="media">
+            <a class="pull-left" href="#"><span class="dateEl"><em>15</em>Dec</span></a>
+            <div class="media-body">
+              <h4 class="media-heading">
+                <a href="#">Event 3</a>
+              </h4>
+              <div class="meta-data">
+                <span class="longDate">Dec 15, 2016</span> <span class="timeEl">05:30pm - 07:30pm</span>
+              </div>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              </p>
+            </div><!-- / media-body -->
+          </div><!-- / media -->
+        </div><!-- / .col-md-6 -->
+        <div class="col-md-6">
+          <div class="media">
+            <a class="pull-left" href="#"><span class="dateEl"><em>18</em>Dec</span></a>
+            <div class="media-body">
+              <h4 class="media-heading">
+                <a href="#">Event 4</a>
+              </h4>
+              <div class="meta-data">
+                <span class="longDate">Dec 18, 2016</span> <span class="timeEl">06:00pm - 08:00pm</span>
+              </div>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              </p>
+            </div><!-- / media-body -->
+          </div><!-- / media -->
+          <div class="media">
+            <a class="pull-left" href="#"><span class="dateEl"><em>21</em>Dec</span></a>
+            <div class="media-body">
+              <h4 class="media-heading">
+                <a href="#">Event 5</a>
+              </h4>
+              <div class="meta-data">
+                <span class="longDate">Dec 21, 2016</span> <span class="timeEl">10:00am - 12:00pm</span>
+              </div>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            </div><!-- / media-body -->
+          </div><!-- / media -->
+          <div class="media">
+            <a class="pull-left" href="#"><span class="dateEl"><em>21</em>Dec</span></a>
+            <div class="media-body">
+              <h4 class="media-heading">
+                <a href="#">Event 6</a>
+              </h4>
+              <div class="meta-data">
+                <span class="longDate">Dec 22, 2016</span> <span class="timeEl">10:00am - 12:00pm</span>
+              </div>
+              <p>
+               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              </p>
+            </div><!-- / media-body -->
+          </div><!-- / media -->
+        </div><!-- / .col-md-6 -->
+      </div><!-- / row -->
+      <div class="text-center">
+        <br>
+        <a class="btn btn-default" href="#">SEE ALL EVENTS</a>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="tab2">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="blogPost--small">
+            <div class="media">
+              <span class="pull-left"><a href="#"><span class="date"><span>29</span> <small>Nov</small></span></a></span>
+              <div class="media-body">
+                <h4 class="media-heading">
+                  <a href="#">Event 7</a>
+                </h4>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                </p>
+              </div>
+            </div>
+          </div><!-- / blogPost -->
+          <div class="blogPost--small">
+            <div class="media">
+              <span class="pull-left"><a href="#"><span class="date"><span>22</span> <small>Nov</small></span></a></span>
+              <div class="media-body">
+                <h4 class="media-heading">
+                  <a href="#">Event 8</a>
+                </h4>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                </p>
+              </div>
+            </div>
+          </div><!-- / blogPost -->
+        </div><!-- / .col-md-6 -->
+        <div class="col-md-6">
+          <div class="blogPost--small">
+            <div class="media">
+              <span class="pull-left"><a href="#"><span class="date"><span>12</span> <small>Nov</small></span></a></span>
+              <div class="media-body">
+                <h4 class="media-heading">
+                  <a href="#">Event 9</a>
+                </h4>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                </p>
+              </div>
+            </div>
+          </div><!-- / blogPost -->
+          <div class="blogPost--small">
+            <div class="media">
+              <span class="pull-left"><a href="#"><span class="date"><span>10</span> <small>Nov</small></span></a></span>
+              <div class="media-body">
+                <h4 class="media-heading">
+                  <a href="#">Event 9</a>
+                </h4>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                </p>
+              </div>
+            </div>
+          </div><!-- / blogPost -->
+        </div><!-- / row -->
+        <div class="text-center">
+          <br>
+          <a class="btn btn-default" href="#">SEE ALL NEWS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+
+</body>
+</html>

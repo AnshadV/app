@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" src="min.css">
+	<title></title>
+	<style>
+
+		body{
+			background-color: #EAF0F1;
+		}
+
+		.auth{
+			border: 1px;
+		}
+		.ban{
+			width: 65%;
+			float: left;
+			height: 680px;
+
+		}
+
+		.preimg img{
+			width: 150px;
+			height: 50px;
+			padding-bottom: 2px;
+			padding-right: 3px;
+
+		}
+		.preimg {
+			align-items: left;
+			margin-right: 70%;
+
+		}
+		.dropbtn {
+			background-color: #333;
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		}
+		.dlang{
+			float: right;
+		}
+
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+
+		.dropdown-content a:hover {background-color: #111}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		.dropdown:hover .dropbtn {
+			background-color: #3e8e41;
+		}
+		.menu{
+			float:right;
+		}
+		ul {
+			list-style-type: none;
+			margin-top: 20px;
+			margin-right: 5px;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		li {
+			width: 165px;
+			height: 70px;
+			float: left;
+		}
+
+		li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 25px 16px;
+			text-decoration: none;
+		}
+
+		li a:hover {
+			background-color: #111;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+		.active{
+			height:100%;
+		}
+
+		/* Style the tab */
+		.tab {
+			overflow: hidden;
+			border: 1px solid #ccc;
+			background-color: #EAF0F1;
+			height: 100%;
+			width: 263px;
+			margin-left: 40%;
+		}
+
+		/* Style the buttons inside the tab */
+		.tab button {
+			background-color: #333;
+			float: left;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 14px 16px;
+			transition: 0.3s;
+			font-size: 17px;
+		}
+
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+			background-color: #ddd;
+		}
+
+		/* Create an active/current tablink class */
+		.tab button.active {
+			background-color: #ccc;
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+			display: none;
+			padding: 6px 12px;
+			border: 1px solid #ccc;
+			border-top: none;
+			height: 400px;
+			width:100%;
+			position: absolute;
+			left: 35%;
+			margin-left: -50px;
+		}
+		.pcdata{
+			width:100%;
+		}
+		.req{
+			margin-top: 400px;
+		}
+		td{
+			padding: 15px;
+		}
+	</style>
+</head>
+<body>
+	<div class="prehead">
+		<div class="dlang">
+			<button class="dropbtn">Select your Language</button>
+			<div class="dropdown-content">
+				<a href="#">English</a>
+				<a href="#">Hindi</a>
+				<a href="#">Kannada</a>
+			</div>
+		</div>
+		<div class="preimg">
+			<img src="poshan.png">
+			<img src="MWCD.png">
+		</div>
+		<hr>
+	</div>
+
+	<div class="head">
+		<img src="MWCD.png" height="100px" width="250px">
+		<div class="menu">
+			<ul>
+				<li><a class="active" href="#home">Home</a></li>
+				<li><a href="#news">Events</a></li>
+				<li><a href="#contact">Analytics</a></li>
+				<li><a href="#contact">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li><a href="#contact">Details</a></li>
+			</ul>
+		</div>
+<div class="pcdata">
+		<div class="tab">
+			<button class="dropbtn" onclick="openCity(event, 'pw')">Pregnant Women</button>
+			<button class="dropbtn" onclick="openCity(event, 'child')">Childern</button>
+		</div>
+
+		<div id="pw" class="tabcontent">
+			<table border=1>
+				<tr>
+					<td>Name</td>
+					<td>Health Status</td>
+					<td>Month</td>
+					<td>Upcoming Dose</td>
+					<td>Notify</td>
+				</tr>
+				<tr>
+					<td>Reshma</td>
+					<td>Good</td>
+					<td>5</td>
+					<td>23/03/2019</td>
+					<td><button class="dropbtn">Notify</button></td>
+				</tr>
+				<tr>
+					<td>Reshma</td>
+					<td>Good</td>
+					<td>5</td>
+					<td>23/03/2019</td>
+					<td><button class="dropbtn">Notify</button></td>
+				</tr>
+				<tr>
+					<td>Reshma</td>
+					<td>Good</td>
+					<td>5</td>
+					<td>23/03/2019</td>
+					<td><button class="dropbtn">Notify</button></td>
+				</tr>
+				<tr>
+					<td>Reshma</td>
+					<td>Good</td>
+					<td>5</td>
+					<td>23/03/2019</td>
+					<td><button class="dropbtn">Notify</button></td>
+				</tr>
+				<tr>
+					<td>Reshma</td>
+					<td>Good</td>
+					<td>5</td>
+					<td>23/03/2019</td>
+					<td><button class="dropbtn">Notify</button></td>
+
+				</table>
+			</div>
+
+			<div id="child" class="tabcontent">
+				<table border=1>
+					<tr>
+						<td>Name</td>
+						<td>Health Status</td>
+						<td>DOB</td>
+						<td>Age</td>
+						<td>Upcoming Dose</td>
+						<td>Notify the Patient</td>
+					</tr>
+					<tr>
+						<td>Amal</td>
+						<td>Good</td>
+						<td>12/01/2019</td>
+						<td>3 Months</td>
+						<td>23/03/2019</td>
+						<td><button class="dropbtn">Notify</button></td>
+					</tr>
+					<tr>
+						<td>Amal</td>
+						<td>Good</td>
+						<td>12/01/2019</td>
+						<td>3 Months</td>
+						<td>23/03/2019</td>
+						<td><button class="dropbtn">Notify</button></td>
+					</tr>
+					<tr>
+						<td>Amal</td>
+						<td>Good</td>
+						<td>12/01/2019</td>
+						<td>3 Months</td>
+						<td>23/03/2019</td>
+						<td><button class="dropbtn">Notify</button></td>
+					</tr>
+					<tr>
+						<td>Amal</td>
+						<td>Good</td>
+						<td>12/01/2019</td>
+						<td>3 Months</td>
+						<td>23/03/2019</td>
+						<td><button class="dropbtn">Notify</button></td>
+					</tr>
+					<tr>
+						<td>Amal</td>
+						<td>Good</td>
+						<td>12/01/2019</td>
+						<td>3 Months</td>
+						<td>23/03/2019</td>
+						<td><button class="dropbtn">Notify</button></td>
+					</tr>
+				</table>
+
+			</div>
+		</div>
+
+			<div id="Tokyo" class="tabcontent">
+				<h3>Tokyo</h3>
+				<p>Tokyo is the capital of Japan.</p>
+			</div>
+
+<div class="req">			
+<table>
+	<tr>
+		<td>Name</td>
+		<td>Med</td>
+		<td>Date</td>
+	</tr>
+	<tr>
+		<td>Person 1</td>
+		<td>TT1</td>
+		<td>23/01/2019</td>
+	</tr>
+	<tr>
+		<td>Person 2</td>
+		<td>TT2</td>
+		<td>24/01/2019</td>
+
+<div class="req">
+			<form action="/action_page.php">
+  <fieldset>
+    <legend>Send Request</legend>
+    <br>
+    Enter the items
+    <input type="textarea" name="firstname" value="Mickey">
+    <br>
+	<input float="left" type="submit" value="Submit">
+	<p>Quantity</p>
+	<input type="text">
+
+  </fieldset>
+</form>
+			</div>
+
+
+			<script>
+				function openCity(evt, cityName) {
+					var i, tabcontent, tablinks;
+					tabcontent = document.getElementsByClassName("tabcontent");
+					for (i = 0; i < tabcontent.length; i++) {
+						tabcontent[i].style.display = "none";
+					}
+					tablinks = document.getElementsByClassName("tablinks");
+					for (i = 0; i < tablinks.length; i++) {
+						tablinks[i].className = tablinks[i].className.replace(" active", "");
+					}
+					document.getElementById(cityName).style.display = "block";
+					evt.currentTarget.className += " active";
+				}
+			</script>
+
+
+		</body>
+</html>

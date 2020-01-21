@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/circle.css">
+	<link rel="stylesheet" href="style.css">
+	<title></title>
+	<style type="text/css">
+		.flex-container {
+			display: flex;
+			background-color: DodgerBlue;
+		}
+
+		.flex-container > div {
+			background-color: #f1f1f1;
+			margin: 10px;
+			padding: 20px;
+			font-size: 30px;
+		}
+		.collapsible {
+			background-color: #777;
+			color: white;
+			cursor: pointer;
+			padding: 18px;
+			width: 100%;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 15px;
+		}
+
+		.active, .collapsible:hover {
+			background-color: #555;
+		}
+
+		.content {
+			padding: 0 18px;
+			display: none;
+			overflow: hidden;
+			background-color: #f1f1f1;
+		}
+		td{
+			padding: 15px;
+		}	
+		</style>
+	</head>
+	<body>
+		<div class="prehead">
+			<div class="dlang">
+				<button class="dropbtn">Select your Language</button>
+				<div class="dropdown-content">
+					<a href="#">English</a>
+					<a href="#">Hindi</a>
+					<a href="#">Kannada</a>
+				</div>
+			</div>
+			<div class="preimg">
+				<img src="poshan.png">
+				<img src="MWCD.png">
+			</div>
+			<hr>
+		</div>
+
+		<div class="head">
+			<img src="PALAN.png" height="100px" width="250px">
+			<div class="menu">
+				<ul>
+					<li><a class="active" href="#home">Home</a></li>
+					<li><a href="#news">Events</a></li>
+					<li><a href="#contact">Analytics</a></li>
+					<li><a href="#contact">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="#contact">Details</a></li>
+				</ul>
+			</div>
+
+			<center><h1>Analysis</h1></center>
+			<div class="flex-container">
+				<div><div class="bar1">
+					<div class="clearfix">
+
+						<div class="c100 p50 big">
+							<span>70%</span>
+							<div class="slice">
+								<div class="bar"></div>
+								<div class="fill"></div>
+							</div>
+						</div>
+					</div>
+					Women Dose
+				</div></div>
+				<div><div class="bar1">
+					<div class="clearfix">
+
+						<div class="c100 p50 big">
+							<span>65%</span>
+							<div class="slice">
+								<div class="bar"></div>
+								<div class="fill"></div>
+							</div>
+						</div>
+					</div>
+					Child Vaccines and Polios
+				</div></div>
+				<div><div class="bar1">
+					<div class="clearfix">
+
+						<div class="c100 p50 big">
+							<span>63%</span>
+							<div class="slice">
+								<div class="bar"></div>
+								<div class="fill"></div>
+							</div>
+						</div>
+					</div>
+					Deployment of the Project
+				</div></div>  
+				<div>
+					<div class="bar1">
+						<div class="clearfix">
+
+							<div class="c100 p50 big">
+								<span>58%</span>
+								<div class="slice">
+									<div class="bar"></div>
+									<div class="fill"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					Expense
+				</div>
+			</div>
+		</div><br>
+		<br><br>
+
+		<div class="reque">
+			<table>
+				<tr>
+					<td>SL.NO</td>
+					<td>Request</td>
+					<td>Status</td>
+				</tr>
+				
+				<tr>
+					<td>1</td>
+					<div>
+					<td><button type="button" class="collapsible">REQ-ANM05262-20/01/2020</button>
+						<div class="content">
+							<ol>
+								<li>Item 1</li><br>
+								<li>Item 2</li><br>
+								<li>Item 3</li><br>
+								<li>Item 4</li>
+							</ol>
+						</div>
+					</div>
+					</td>
+					<td><select>
+						<option value="volvo">Recieved</option>
+						<option value="saab">Processing</option>
+						<option value="mercedes">Shipped</option>
+						<option value="audi">Delivered</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+					<td>1</td>
+					<div>
+					<td><button type="button" class="collapsible">REQ-ANM05262-20/01/2020</button>
+						<div class="content">
+							<ol>
+								<li>Item 1</li><br>
+								<li>Item 2</li><br>
+								<li>Item 3</li><br>
+								<li>Item 4</li>
+							</ol>
+						</div>
+					</div>
+					</td>
+					<td><select>
+						<option value="volvo">Recieved</option>
+						<option value="saab">Processing</option>
+						<option value="mercedes">Shipped</option>
+						<option value="audi">Delivered</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+					<td>1</td>
+					<div>
+					<td><button type="button" class="collapsible">REQ-ANM05262-20/01/2020</button>
+						<div class="content">
+							<ol>
+								<li>Item 1</li><br>
+								<li>Item 2</li><br>
+								<li>Item 3</li><br>
+								<li>Item 4</li>
+							</ol>
+						</div>
+					</div>
+					</td>
+					<td><select>
+						<option value="volvo">Recieved</option>
+						<option value="saab">Processing</option>
+						<option value="mercedes">Shipped</option>
+						<option value="audi">Delivered</option>
+					</select>
+				</td>
+			</tr>
+
+
+
+<script type="text/javascript">
+	 var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+} 
+</script>
+
+
+
+			</body>
+			</html>
